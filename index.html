@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Habillage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #ffffff;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      p {
+        font-family: Kanit, sans-serif;
+      }
+
+      .TPLG-mid {
+        width: 480px;
+        height: 110px;
+        background-image: url("https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/fond3.png");
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .text-container {
+        position: relative;
+        width: 320px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-image: url("https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/new-fond-1800x1000.png");
+        background-size: cover;
+      }
+
+      .Logo-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: afficher-logo 21s infinite;
+      }
+
+      @keyframes afficher-logo {
+        0%,
+        14.28% {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        14.29%,
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      .Logo-container img {
+        position: absolute;
+        height: 60%;
+        padding: 0 5px;
+        background-color: rgba(255, 255, 255, 0.551);
+        animation: entree-sortie 3s ease-in-out infinite;
+      }
+
+      @keyframes entree-sortie {
+        0% {
+          top: -76px;
+          opacity: 0;
+        }
+
+        25% {
+          top: 15px;
+          opacity: 1;
+        }
+
+        75% {
+          top: 15px;
+          opacity: 1;
+        }
+
+        100% {
+          top: 110px;
+          opacity: 0;
+        }
+      }
+
+      .carousel-text-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      /******** Carousel Text *********/
+      /********************************/
+
+      .TPLG-text-carousel-container {
+        width: 100%;
+        height: 79px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        gap: 10px;
+        animation: afficher-carrousel 21s ease-in-out infinite;
+      }
+
+      @keyframes afficher-carrousel {
+        0%,
+        14% {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        14.29% {
+          opacity: 0;
+          visibility: visible;
+        }
+
+        16%,
+        71.42% {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        71.43%,
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      .TPLG-text-carousel {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .TPLG-text-carousel2 {
+        height: 20px;
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .TPLG-text-carousel-container p {
+        background-color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 700;
+        font-family: Kanit, sans-serif;
+        position: absolute;
+        text-transform: uppercase;
+        opacity: 0;
+        margin: 0;
+        padding: 2px 8px;
+      }
+
+      .TPLG-text-carousel .animation-left {
+        border-radius: 10px 0 0 0;
+        border-top: solid 2px #000000;
+        border-left: solid 4px #000000;
+        color: #000000;
+        animation: rotateText 12s infinite;
+      }
+
+      .TPLG-text-carousel2 .animation-right {
+        color: #e30713;
+        border-radius: 0 0 10px 0;
+        animation: rotateText2 12s infinite;
+        border-right: solid 4px #e30713;
+        border-bottom: solid 1px #e30713;
+      }
+
+      .TPLG-text-carousel p:nth-child(1),
+      .TPLG-text-carousel2 p:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .TPLG-text-carousel p:nth-child(2),
+      .TPLG-text-carousel2 p:nth-child(2) {
+        animation-delay: 3s;
+      }
+      .TPLG-text-carousel p:nth-child(3),
+      .TPLG-text-carousel2 p:nth-child(3) {
+        animation-delay: 6s;
+      }
+      .TPLG-text-carousel p:nth-child(4),
+      .TPLG-text-carousel2 p:nth-child(4) {
+        animation-delay: 9s;
+      }
+
+      @keyframes rotateText {
+        0% {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        5% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        25% {
+          opacity: 1;
+        }
+        30% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes rotateText2 {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        5% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        25% {
+          opacity: 1;
+        }
+        30% {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      /****************************/
+      /****************************/
+
+      .services-container1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        animation: afficher-services1 21s ease-in-out infinite;
+      }
+
+      @keyframes afficher-services1 {
+        0%,
+        71.43% {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        72.5%,
+        84% {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        85.72%,
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      .item {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        background-color: rgba(255, 255, 255, 0.599);
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+      .item img {
+        width: 55px;
+        border-radius: 100px;
+        object-fit: contain;
+      }
+
+      .item p {
+        margin: 0;
+        font-size: 12px;
+        color: white;
+        background-color: #e30713;
+        border-radius: 10px;
+        padding: 0px 6px;
+      }
+
+      .services-container2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        animation: afficher-services2 21s ease-in-out infinite;
+      }
+
+      @keyframes afficher-services2 {
+        0%,
+        84.5% {
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        85.72%,
+        100% {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      /*****************************/
+      /********  Vidéo *************/
+      .video-container {
+        max-width: 80px;
+        height: 110px;
+        background: transparent;
+      }
+
+      .video-container video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        box-sizing: border-box;
+      }
+
+      .left {
+        border-right: solid 2px #e30713;
+        box-sizing: border-box;
+      }
+
+      .right {
+        border-left: solid 2px #e30713;
+        box-sizing: border-box;
+      }
+
+      /*************************/
+      /******* lien ************/
+      .TPLG-global-link {
+        position: absolute;
+        max-width: 480px;
+        width: 100%;
+        height: 110px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <a
+      href="https://www.toutpourlegrain.fr/fr/"
+      target="_blank"
+      class="TPLG-global-link"
+    >
+    </a>
+    <div class="TPLG-mid">
+      <div class="video-container left">
+        <video autoplay muted loop playsinline>
+          <source
+            src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/video-drone.mp4"
+            type="video/mp4"
+          />
+          Votre navigateur ne prend pas en charge la lecture vidéo.
+        </video>
+      </div>
+      <div class="text-container">
+        <div class="Logo-container">
+          <img
+            src="https://www.toutpourlegrain.fr/images/Logo-TPLG.svg"
+            alt="Logo Tout pour le grain"
+          />
+        </div>
+        <div class="carousel-text-container">
+          <div class="TPLG-text-carousel-container">
+            <div class="TPLG-text-carousel">
+              <p class="animation-left">Stockez vos récoltes</p>
+              <p class="animation-left">Expertise technique</p>
+              <p class="animation-left">Votre projet de stockage</p>
+              <p class="animation-left">étude gratuite</p>
+            </div>
+            <div class="TPLG-text-carousel2">
+              <p class="animation-right">à moindre coût</p>
+              <p class="animation-right">depuis plus de 65 ans</p>
+              <p class="animation-right">sur-mesure</p>
+              <p class="animation-right">et personnalisée</p>
+            </div>
+          </div>
+        </div>
+        <div class="services-container1">
+          <div class="item">
+            <img
+              src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/Stockage.png"
+              alt="Stockage"
+            />
+            <p>Stockage</p>
+          </div>
+          <div class="item">
+            <img
+              src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/Manutention.png"
+              alt="Manutention"
+            />
+            <p>Manutention</p>
+          </div>
+          <div class="item">
+            <img
+              src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/Ventilation.png"
+              alt="Ventilation"
+            />
+            <p>Ventilation</p>
+          </div>
+        </div>
+        <div class="services-container2">
+          <div class="item">
+            <img
+              src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/Séchage.png"
+              alt="Séchage"
+            />
+            <p>Séchage</p>
+          </div>
+          <div class="item">
+            <img
+              src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/Nettoyage.png"
+              alt="Nettoyage"
+            />
+            <p>Nettoyage</p>
+          </div>
+          <div class="item">
+            <img
+              src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/Automatisation.png"
+              alt="Automatisation"
+            />
+            <p>Automatisation</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-container right">
+        <video autoplay muted loop playsinline>
+          <source
+            src="https://raw.githubusercontent.com/bttTPLG/img/refs/heads/main/asset/video-drone.mp4"
+            type="video/mp4"
+          />
+          Votre navigateur ne prend pas en charge la lecture vidéo.
+        </video>
+      </div>
+    </div>
+  </body>
+</html>
